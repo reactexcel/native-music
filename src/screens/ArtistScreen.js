@@ -15,17 +15,43 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import MusicControl from 'react-native-music-control';
 var {height, width} = Dimensions.get('window');
 
+var song = require('../assets/EminemVenom.mp3')
 var artistData = require('../constants/artist.json')
+import Video from 'react-native-video';
 
 export default class ArtistScreen extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
+    this.state = {
+      play: false,
+      pause: false,
+      stop: false,
+    }
   }
   componentDidMount() {
     // call api to get artist data from firebase
-  
+    MusicControl.enableBackgroundMode(true);
+
   }
+
+  handlePlay = () => {
+    this.setState({
+      play: true,
+      pause: false,
+    })
+    MusicControl.enableControl('play', true)
+  }
+
+  handlePause = () => {
+    this.setState({
+      play: false,
+      pause: true,
+    })
+    MusicControl.enableControl('pause', true)
+  }
+
   render() {
+    const { play, pause } = this.state;
     return (
       <ScrollView style={{flex:1}} >
           <View>
@@ -50,10 +76,30 @@ export default class ArtistScreen extends React.Component {
 
               <View style={{alignContent:'center',flexDirection:'column',justifyContent:'space-between',width:60}} >
                 <View style={{margin:10}} >
-                  <Icon
-                    size={45}
-                    name="play-circle"
-                  />
+                <Video 
+                  source={require('../assets/EminemVenom.mp3')} 
+                  audioOnly
+                />
+                 
+                  { !play ?
+                    <TouchableOpacity
+                    onPress={this.handlePlay}
+                    >
+                    <Icon
+                      size={45}
+                      name="pause-circle"
+                    />
+                    </TouchableOpacity>
+                    :
+                    <TouchableOpacity
+                    onPress={this.handlePause}
+                    >
+                    <Icon
+                      size={45}
+                      name="play-circle"
+                    />
+                    </TouchableOpacity>
+                  }
                 </View>
 
                 <View style={{flexDirection:'row',margin:10}} >

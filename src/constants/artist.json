@@ -1,0 +1,27 @@
+{
+  "artistname": "Sergei Novikov",
+  "artistphoto": "sergeinovikov,jpg",
+  "format": "mp3",
+  "albums": [
+    {
+    "albumname": "Simply Intoxicating",
+    "albumimage": "simplyintoxicating.jpg"
+    },
+    {
+    "songs": [
+      {
+      "id" : 1,
+      "songname" : "Send in the Clowns 1"
+      },
+      {
+      "id": 2,
+      "songname" : "Lost in Time"
+      },
+      {
+      "id": 3,
+      "songname": "It Had to be you 1"
+      }
+    ]
+    }
+  ]
+}

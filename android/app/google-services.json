@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "496898665384",
+    "firebase_url": "https://muzaapp-a7821.firebaseio.com",
+    "project_id": "muzaapp-a7821",
+    "storage_bucket": "muzaapp-a7821.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496898665384:android:340e3270d329f19c",
+        "android_client_info": {
+          "package_name": "com.muzaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496898665384-h8gvto44jtgfp2rr6r2nc9coqap1i57i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.muzaapp",
+            "certificate_hash": "d6c116494cae239dea06057875dce74430791af0"
+          }
+        },
+        {
+          "client_id": "496898665384-bfk1dgr2of429mdoa9oc8e2kikni9jug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfYaOmblETmfp6QqVMsNvMNiCHsxfNHnM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496898665384-bfk1dgr2of429mdoa9oc8e2kikni9jug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

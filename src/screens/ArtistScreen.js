@@ -79,6 +79,8 @@ export default class ArtistScreen extends React.Component {
                 <Video 
                   source={require('../assets/EminemVenom.mp3')} 
                   paused={this.state.play}
+                  playInBackground={true}
+                  playWhenInactive={true}
                   audioOnly
                 />
                  

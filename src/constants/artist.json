@@ -2,6 +2,7 @@
   "artistname": "Sergei Novikov",
   "artistphoto": "sergeinovikov,jpg",
   "format": "mp3",
+  "source":"https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/EminemVenom.mp3?alt=media&token=82a3ab0e-d671-475d-a7a2-0ce391d23d47",
   "albums": [
     {
     "albumname": "Simply Intoxicating",

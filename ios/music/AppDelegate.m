@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 
+#import <AVFoundation/AVFoundation.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <Firebase.h>
@@ -18,7 +19,7 @@
   NSURL *jsCodeLocation;
   [FIRApp configure];
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"music"
                                                initialProperties:nil

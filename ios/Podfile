@@ -9,6 +9,32 @@ target 'music' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
 
+  pod 'React', :path => '../node_modules/react-native', subspecs: [
+    'Core',
+    'CxxBridge',
+    'RCTAnimation',
+    'RCTActionSheet',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+    'RCTPushNotification',
+    'RCTCameraRoll',
+    'RCTSettings',
+    'RCTBlob',
+    'RCTGeolocation',
+    'DevSupport'
+  ]
+
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'  
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'react-native-video', :path => '../node_modules/react-native-video/react-native-video.podspec'
+
   target 'musicTests' do
     inherit! :search_paths
     # Pods for testing

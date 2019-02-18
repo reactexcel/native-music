@@ -2,7 +2,8 @@
   "artistname": "Sergei Novikov",
   "artistphoto": "sergeinovikov,jpg",
   "format": "mp3",
-  "source":"https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/EminemVenom.mp3?alt=media&token=82a3ab0e-d671-475d-a7a2-0ce391d23d47",
+  "source1":"https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/EminemVenom.mp3?alt=media&token=82a3ab0e-d671-475d-a7a2-0ce391d23d47",
+  "source2":"https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/tu-meri-me-tera.mp3?alt=media&token=718221be-5c94-41ae-8a02-85de0c51ed51",
   "albums": [
     {
     "albumname": "Simply Intoxicating",

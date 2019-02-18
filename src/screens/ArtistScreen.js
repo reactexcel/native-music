@@ -9,7 +9,8 @@ import {
   View,
   Dimensions,
   TextInput,
-  KeyboardAvoidingView
+  KeyboardAvoidingView,
+  ActivityIndicator
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MusicControl from 'react-native-music-control';
@@ -26,6 +27,11 @@ export default class ArtistScreen extends React.Component {
       play: false,
       pause: false,
       stop: false,
+      IsSongLoading:true,
+      IsSongStopLoading:false,
+      IsSongPlayStart:false,
+      IsSongPlaying:false,
+      border:1
     }
   }
   componentDidMount() {
@@ -49,6 +55,11 @@ export default class ArtistScreen extends React.Component {
     })
     MusicControl.enableControl('pause', true)
   }
+  componentDidUpdate(){
+    if(this.state.IsSongPlayStart){
+      this.setState({IsSongPlayStart:false,IsSongLoading:false,IsSongStopLoading:true,border:0 })
+    }
+  }
 
   render() {
     const { play, pause } = this.state;
@@ -56,11 +67,16 @@ export default class ArtistScreen extends React.Component {
       <ScrollView style={{flex:1}} >
           <View>
             <View style={styles.container}>
-              <View style={styles.ImageContainer}>
-                <Image
+              <View style={[styles.ImageContainer ,{borderWidth:this.state.border}]}>
+                {this.state.IsSongLoading && <View style={styles.ActivityIndicator}> 
+                     <ActivityIndicator size="large" color="#0000ff" />
+                  </View>
+                }
+               {this.state.IsSongStopLoading && <Image
                   style={styles.Image}
                   source={require('../assets/images/sergeinovikov.png')}
                 />
+               }
               </View>
               <Text style={styles.artistName}>
                 {artistData.artistname}
@@ -77,10 +93,11 @@ export default class ArtistScreen extends React.Component {
               <View style={{alignContent:'center',flexDirection:'column',justifyContent:'space-between',width:60}} >
                 <View style={{margin:10}} >
                 <Video 
-                  source={require('../assets/EminemVenom.mp3')} 
+                  source={{uri:artistData.source2}} 
                   paused={this.state.play}
                   playInBackground={true}
                   playWhenInactive={true}
+                  onProgress={()=> !this.state.IsSongPlaying ? this.setState({IsSongPlayStart:true ,IsSongPlaying:true}) :''}
                   audioOnly
                 />
                  
@@ -194,10 +211,16 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'center',
     alignContent:'center',
+    alignItems:'center',
+    width:width * 0.51,
+    height: height * 0.30,
+    alignSelf:'center',
+    
   },
   Image:{
     width:width * 0.51,
     height: height * 0.30
+    // width:"100%"
   },
   artistName:{
     marginTop:5,
@@ -222,5 +245,11 @@ const styles = StyleSheet.create({
     fontSize:12,
     marginBottom:2,
     color:'gray'
-  }
+  },
+    ActivityIndicator:{
+      position:'absolute',
+      justifyContent:'center',
+      zIndex:1
+    }
+
 });

@@ -7,21 +7,22 @@
   "albums": [
     {
     "albumname": "Simply Intoxicating",
-    "albumimage": "https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/simplyintoxicati.jpg?alt=media&token=378a0dfc-204f-4ee6-93e0-56d74313914b"
-    },
-    {
+    "albumimage": "https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/simplyintoxicati.jpg?alt=media&token=378a0dfc-204f-4ee6-93e0-56d74313914b",
     "songs": [
       {
       "id" : 1,
-      "songname" : "Send in the Clowns 1"
+      "songname" : "Send in the Clowns 1",
+      "source1":"https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/EminemVenom.mp3?alt=media&token=82a3ab0e-d671-475d-a7a2-0ce391d23d47",
       },
       {
       "id": 2,
-      "songname" : "Lost in Time"
+      "songname" : "Lost in Time",
+      "source1":"https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/EminemVenom.mp3?alt=media&token=82a3ab0e-d671-475d-a7a2-0ce391d23d47",
       },
       {
       "id": 3,
-      "songname": "It Had to be you 1"
+      "songname": "It Had to be you 1",
+      "source1":"https://firebasestorage.googleapis.com/v0/b/muzaapp-a7821.appspot.com/o/EminemVenom.mp3?alt=media&token=82a3ab0e-d671-475d-a7a2-0ce391d23d47",
       }
     ]
     }

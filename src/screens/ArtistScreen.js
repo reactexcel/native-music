@@ -141,7 +141,7 @@ export default class ArtistScreen extends React.Component {
               <View style={{flex:1,flexDirection:'column'}} >
                 <View>
                   <Text style={styles.albumDetail} numberOfLines={1} ellipsizeMode={'tail'} > {artistData.artistname} </Text>
-                  <Text style={styles.albumDetail} numberOfLines={1} > {artistData.albums[1].songs[0].songname} </Text>
+                  <Text style={styles.albumDetail} numberOfLines={1} > {artistData.albums[0].songs[0].songname} </Text>
                   <Text style={styles.albumDetail} numberOfLines={1} > {artistData.albums[0].albumname} </Text>
                 </View>
 
@@ -180,7 +180,7 @@ export default class ArtistScreen extends React.Component {
           </View>
         
           <View style={{flex:1}} >
-              { artistData.albums[1].songs.map(song =>{
+              { artistData.albums[0].songs.map(song =>{
                 return(
                   <View key={song.id} style={styles.songItem} >
                    <View style={{flexDirection:'row',margin:5}} >

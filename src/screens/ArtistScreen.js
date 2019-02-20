@@ -74,7 +74,7 @@ export default class ArtistScreen extends React.Component {
                 }
                {this.state.IsSongStopLoading && <Image
                   style={styles.Image}
-                  source={require('../assets/images/sergeinovikov.png')}
+                  source={{uri:artistData.artistphoto}}
                 />
                }
               </View>
@@ -86,7 +86,7 @@ export default class ArtistScreen extends React.Component {
               <View style={{flexDirection:'column',alignItems:'center'}} >
                 <Image
                   style={{height:60,width:60,marginTop:5,marginBottom:5}}
-                  source={require('../assets/images/simplyintoxicati.jpg')}
+                  source={{uri:artistData.albums[0].albumimage}}
                 />
               </View>
 

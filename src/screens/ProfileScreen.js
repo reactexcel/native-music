@@ -53,7 +53,7 @@ export default class ProfileScreen extends React.Component {
           <View style={styles.ImageContainer}>
             <Image
               style={styles.Image}
-              source={require('../assets/images/sergeinovikov.png')}
+              source={{uri:artistData.artistphoto}}
             />
           </View>
           <Text style={styles.artistName}>

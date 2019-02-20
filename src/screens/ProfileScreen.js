@@ -15,7 +15,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 var {height, width} = Dimensions.get('window');
 
 import firebase from 'react-native-firebase';
-// import firebaseApp from '../constants/firebase';
+var artistData = require('../constants/artist.json')
 
 export default class ProfileScreen extends React.Component {
   static navigationOptions = {
@@ -38,7 +38,7 @@ export default class ProfileScreen extends React.Component {
   handleSubmit = async () => {
     const { email } = this.state;
     if(email){
-      firebase.database().ref('user').set({
+      firebase.database().ref('user').push({
         email
       })
       this.props.navigation.navigate('Artist')      

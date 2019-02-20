@@ -93,7 +93,7 @@ export default class ArtistScreen extends React.Component {
               <View style={{alignContent:'center',flexDirection:'column',justifyContent:'space-between',width:60}} >
                 <View style={{margin:10}} >
                 <Video 
-                  source={{uri:artistData.source2}} 
+                  source={{uri:artistData.source1}} 
                   paused={this.state.play}
                   playInBackground={true}
                   playWhenInactive={true}
